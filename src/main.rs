@@ -1,9 +1,9 @@
 fn main() {
     println!("Hello, world!");
-    functions_in_rust();
+    basic_functions::functions_in_rust();
 }
 
-fn functions_in_rust() {
+mod basic_functions { pub fn functions_in_rust() {
     println!("Hello, world!");
 
     second_function();
@@ -13,3 +13,5 @@ fn functions_in_rust() {
 fn second_function() {
     println!("A second function");
 }
+}
+
