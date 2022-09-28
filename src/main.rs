@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     println!("Hello, world!");
 
@@ -107,6 +109,7 @@ mod enum_and_match {
 // Collections: Vectors and Hash Maps
 
 mod vecs_and_hashmaps {
+    use super::*;
     pub mod vecs {
 
         pub fn vectors_in_rust() -> Vec<i32> {
@@ -124,7 +127,7 @@ mod vecs_and_hashmaps {
     }
 
     pub mod hashmaps {
-        use std::collections::HashMap;
+        use super::*;
 
         pub fn hashmapping() -> HashMap<String, f64> {
         
