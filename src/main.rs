@@ -15,6 +15,9 @@ fn main() {
     enum_and_match::value_in_cents(enum_and_match::Coin::Nickel);
     enum_and_match::value_in_cents(enum_and_match::Coin::Dime);
     enum_and_match::value_in_cents(enum_and_match::Coin::Quarter);
+
+    // Vectors and HashMaps
+    println!("The v vector looks like this {:?}", vecs_and_hashmaps::vecs::v);
 }
 
 mod basic_functions { pub fn functions_in_rust() {
@@ -96,5 +99,27 @@ mod enum_and_match {
             Coin::Dime => println!("Dime in cents is: {}",10),
             Coin::Quarter => println!("Quarter in cents is: {}",25),
         }
+    }
+}
+
+// Collections: Vectors and Hash Maps
+
+mod vecs_and_hashmaps {
+    pub mod vecs {
+        // vectors are growable arrays
+        let mut v: Vec<i32> = vec!::new();
+        v.push(5);
+        v.push(6);
+        v.push(7);
+        v.push(8);
+    }
+
+    pub mod hashmaps {
+        use std::collections::HashMap;
+
+        let mut scores = HashMap::new();
+
+        scores.insert(String::from("Blue"), 10);
+        scores.insert(String::from("Blue"), 50);
     }
 }
