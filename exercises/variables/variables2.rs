@@ -1,7 +1,7 @@
 // variables2.rs
 // Execute `rustlings hint variables2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// Exercise completed
 
 fn main() {
     let x: u8 = 3;
