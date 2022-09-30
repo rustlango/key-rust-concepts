@@ -9,5 +9,6 @@ fn main() {
 }
 
 fn square(num: i32) -> i32 {
+    // removed semicolon o implicit return expression
     num * num
 }
