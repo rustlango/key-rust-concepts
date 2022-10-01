@@ -3,26 +3,31 @@ use std::collections::HashMap;
 fn main() {
     println!("Hello, world!");
 
-    // Basic functions
+    // 1. Basic functions
     basic_functions::functions_in_rust();
 
-    // flow control statements
+    // 2. Flow control statements
 
     flow_control_statements::flow_control_statements();
+
+    // 3. Loops in Rust
+
     loops_in_rust::loop_loop::loop_loop();
     loops_in_rust::while_loop::while_loop();
 
-    // Enums and match statements
+    // 4. Enums and match statements
     enum_and_match::value_in_cents(enum_and_match::Coin::Penny);
     enum_and_match::value_in_cents(enum_and_match::Coin::Nickel);
     enum_and_match::value_in_cents(enum_and_match::Coin::Dime);
     enum_and_match::value_in_cents(enum_and_match::Coin::Quarter);
 
-    // Vectors and HashMaps
+    // 5. Collections: Vectors and HashMaps
     println!("The v vector looks like this {:?}", vecs_and_hashmaps::vecs::vectors_in_rust());
 
     println!("The scores hashmap looks like this {:?}", vecs_and_hashmaps::hashmaps::hashmapping());
 }
+
+// 1. FUNCTIONS IN RUST
 
 mod basic_functions { pub fn functions_in_rust() {
     println!("Hello, world!");
@@ -36,7 +41,7 @@ fn second_function() {
 }
 }
 
-// FLOW CONTROL STATEMENTS
+// 2. FLOW CONTROL STATEMENTS
 
 mod flow_control_statements {
     pub fn flow_control_statements() {
@@ -54,7 +59,7 @@ mod flow_control_statements {
     }
 }
 
-// LOOPS IN RUST
+// 3. LOOPS IN RUST
 
 mod loops_in_rust {
     pub mod loop_loop { 
@@ -84,7 +89,7 @@ mod loops_in_rust {
     }
 }
 
-// Enum and match statements
+// 4. Enum and match statements
 
 mod enum_and_match {
 
@@ -106,7 +111,7 @@ mod enum_and_match {
     }
 }
 
-// Collections: Vectors and Hash Maps
+// 5. Collections: Vectors and Hash Maps
 
 mod vecs_and_hashmaps {
     use super::*;
