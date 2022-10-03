@@ -30,6 +30,18 @@ fn main() {
 
      hi_rustacean!();
 
+     // 7. Generics: Cartesian coordinate system example
+
+     let integer_coordinates  = Cartesianplane {x: 7, y: 28};
+     print!("integer coordinates x {} and y {}\n", integer_coordinates.x, integer_coordinates.y);
+     let float_cooridnates= Cartesianplane {x: 21, y: 42};
+     print!("float coordinates x {} and y {}\n", float_cooridnates.x, float_cooridnates.y);
+     let negative_float_coordinates = Cartesianplane {x: -14.07, y: -21.084};
+     print!("negative float coordinates x {} and y {}\n", negative_float_coordinates.x, negative_float_coordinates.y);
+     let integer_and_float = Cartesianplane {x: 35, y: 42.77};
+     print!("integer and float coordinates x {} and y {}\n", integer_and_float.x, integer_and_float.y);
+
+
 }
 
 // 1. FUNCTIONS IN RUST
@@ -171,4 +183,23 @@ mod basic_macro {
 }
 }
 
+// 7. GENERICS
+// Generics offer a way to create generalisable type definitions for enums, traits, functions, maps and structs
 
+    struct Cartesianplane<T, U> {
+    x: T,
+    y: U,
+}
+
+// 8/ TRAITS:
+// Traits affordrust developers to loosely or tightly enforuce shared functionality on types such as structs
+
+struct Dot {
+    address: 13wfZygbx3iSn19nxvkDuAwaAhPw4aJsZXJtACxysTiv9XGa,
+    balance: 17702.1877829,
+}
+struct Kusama_wallet {
+    address: FWz5xmQidTu67ximzWGeyURTfgXAwZuwQR9PaFaoAutiH5J,
+    balance: 19139.11199937830,
+
+}
