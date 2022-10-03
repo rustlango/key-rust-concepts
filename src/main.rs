@@ -25,6 +25,11 @@ fn main() {
     println!("The v vector looks like this {:?}", vecs_and_hashmaps::vecs::vectors_in_rust());
 
     println!("The scores hashmap looks like this {:?}", vecs_and_hashmaps::hashmaps::hashmapping());
+
+    // 6. Macro rules
+
+     hi_rustacean!();
+
 }
 
 // 1. FUNCTIONS IN RUST
@@ -149,3 +154,21 @@ mod vecs_and_hashmaps {
     }
  }
 }
+
+// 6. Macros
+// A computing paradigm called metaprogramming - which basically means code that writes other code.
+// Macros are there to reduce redundancy and boilerplate in code so that you do not have to write all the time
+// You could have a rust greeter app.
+
+
+mod basic_macro {
+    #[macro_export] macro_rules! hi_rustacean {
+    // `It takes zero arguments.
+    () => {
+        // The macro manifests into the the code below
+        println!("Hello, Rustacean!");
+    };
+}
+}
+
+
