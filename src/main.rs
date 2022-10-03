@@ -1,4 +1,5 @@
-use std::collections::HashMap;
+use std::{collections::HashMap};
+
 
 fn main() {
     println!("Hello, world!");
@@ -33,22 +34,46 @@ fn main() {
      // 7. Generics: Cartesian coordinate system example
 
      let integer_coordinates  = Cartesianplane {x: 7, y: 28};
-     print!("integer coordinates x {} and y {}\n", integer_coordinates.x, integer_coordinates.y);
+     print!("integer coordinates x: {} and y: {}\n", integer_coordinates.x, integer_coordinates.y);
      let float_cooridnates= Cartesianplane {x: 21, y: 42};
-     print!("float coordinates x {} and y {}\n", float_cooridnates.x, float_cooridnates.y);
+     print!("float coordinates x: {} and y: {}\n", float_cooridnates.x, float_cooridnates.y);
      let negative_float_coordinates = Cartesianplane {x: -14.07, y: -21.084};
-     print!("negative float coordinates x {} and y {}\n", negative_float_coordinates.x, negative_float_coordinates.y);
+     print!("negative float coordinates x: {} and y: {}\n", negative_float_coordinates.x, negative_float_coordinates.y);
      let integer_and_float = Cartesianplane {x: 35, y: 42.77};
-     print!("integer and float coordinates x {} and y {}\n", integer_and_float.x, integer_and_float.y);
+     print!("integer and float coordinates x: {} and y: {}\n", integer_and_float.x, integer_and_float.y);
 
     // 8. TRAITS IN ACTION
 
-    impl traits_in_action::Paycrypto for Polkadot {
+    let ksm = Ksm {};
+    let dot = Dot {};
 
-        fn process_payment(&self, payme) {
-            if Polkadot.balance >
-        }
-        
+    ksm.crypto_payment();
+    dot.crypto_payment();
+
+}
+
+// Crypto structs for Kuasama and Polkadot crypto wallets
+struct Ksm {}
+struct Dot {}
+
+
+// Crypto payment processor trait
+trait Paycrypto {
+    fn crypto_payment(&self);
+}
+
+// Implementation of Paycrypto trait extended onto the two crypto wallets
+impl Paycrypto for Ksm {
+
+    fn crypto_payment(&self) {
+        println!("KSM wallet payment processed");
+    }
+}
+
+impl Paycrypto for Dot {
+
+    fn crypto_payment(&self) {
+        println!("DOT wallet payment processed");
     }
 
 }
@@ -177,8 +202,9 @@ mod vecs_and_hashmaps {
 }
 
 // 6. Macros
-// A computing paradigm called metaprogramming - which basically means code that writes other code.
-// Macros are there to reduce redundancy and boilerplate in code so that you do not have to write all the time
+// A computing paradigm called metaprogramming - which basically means code 
+// that writes other code. Macros are there to reduce redundancy and 
+// boilerplate in code so that you do not have to write all the time
 // You could have a rust greeter app.
 
 
@@ -193,7 +219,8 @@ mod basic_macro {
 }
 
 // 7. GENERICS
-// Generics offer a way to create generalisable type definitions for enums, traits, functions, maps and structs
+// Generics offer a way to create generalisable type definitions for enums,
+//  traits, functions, maps and structs
 
     struct Cartesianplane<T, U> {
     x: T,
@@ -201,22 +228,6 @@ mod basic_macro {
 }
 
 // 8. TRAITS:
-// Traits affordrust developers to loosely or tightly enforuce shared functionality on types such as structs
+// Traits affordrust developers to loosely or tightly enforuce shared 
+// functionality on types such as structs
 
-pub mod traits_in_action {
-struct Polkadot {
-    symbol: "DOT",
-    address: "13wfZygbx3iSn19nxvkDuAwaAhPw4aJsZXJtACxysTiv9XGa",
-    balance: 17702.1877829,
-}
-struct Kusama {
-    symbol: "KSM",
-    address: "FWz5xmQidTu67ximzWGeyURTfgXAwZuwQR9PaFaoAutiH5J",
-    balance: 19139.11199937830,
-
-}
-
-trait Paycrypto {
-    fn process_payment(&self);
-}
-}
