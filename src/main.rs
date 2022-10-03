@@ -41,6 +41,15 @@ fn main() {
      let integer_and_float = Cartesianplane {x: 35, y: 42.77};
      print!("integer and float coordinates x {} and y {}\n", integer_and_float.x, integer_and_float.y);
 
+    // 8. TRAITS IN ACTION
+
+    impl traits_in_action::Paycrypto for Polkadot {
+
+        fn process_payment(&self, payme) {
+            if Polkadot.balance >
+        }
+        
+    }
 
 }
 
@@ -191,15 +200,23 @@ mod basic_macro {
     y: U,
 }
 
-// 8/ TRAITS:
+// 8. TRAITS:
 // Traits affordrust developers to loosely or tightly enforuce shared functionality on types such as structs
 
-struct Dot {
-    address: 13wfZygbx3iSn19nxvkDuAwaAhPw4aJsZXJtACxysTiv9XGa,
+pub mod traits_in_action {
+struct Polkadot {
+    symbol: "DOT",
+    address: "13wfZygbx3iSn19nxvkDuAwaAhPw4aJsZXJtACxysTiv9XGa",
     balance: 17702.1877829,
 }
-struct Kusama_wallet {
-    address: FWz5xmQidTu67ximzWGeyURTfgXAwZuwQR9PaFaoAutiH5J,
+struct Kusama {
+    symbol: "KSM",
+    address: "FWz5xmQidTu67ximzWGeyURTfgXAwZuwQR9PaFaoAutiH5J",
     balance: 19139.11199937830,
 
+}
+
+trait Paycrypto {
+    fn process_payment(&self);
+}
 }
