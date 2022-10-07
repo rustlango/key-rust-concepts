@@ -116,14 +116,14 @@ mod loops_in_rust {
     pub mod loop_loop { 
         pub fn loop_loop() {
             let mut i:i32 = 1;
-             i +=1;
-            let result = loop {
+            println!("The value of i is now {}", i);
+            loop {
+                i +=1;
+                println!("The value of i is now {}", i);
                 if i==10 {
                    break i;
                }
         };
-
-        println!("The value of i is now {}", result);
          }
 
     }
