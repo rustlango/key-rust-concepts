@@ -1,7 +1,7 @@
 // variables4.rs
 // Execute `rustlings hint variables4` or use the `hint` watch subcommand for a hint.
 
-// DONE WITH EXERCISE
+// I AM DONE
 
 fn main() {
     // Inserted mut keyword to make variable binding mutable
