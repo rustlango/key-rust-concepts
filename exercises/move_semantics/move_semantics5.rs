@@ -12,7 +12,7 @@ fn main() {
     let z = &mut x;
     *z += 1000;
     assert_eq!(x, 1200);
-    // print to output screen before removing "I AM NOT DONE" line
+    // print to output screen before removing/editing "I AM NOT DONE" comment line
     // Not needed - just for feedback purposes before completing exercise
     println!("value of x is {}", x);
 }
