@@ -1,7 +1,7 @@
 // variables3.rs
 // Execute `rustlings hint variables3` or use the `hint` watch subcommand for a hint.
 
-// DONE WITH EXERCISE
+// I AM DONE
 
 fn main() {
     // need to intialize  a variable after declaring it in rust
