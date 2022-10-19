@@ -1,7 +1,7 @@
 // functions5.rs
 // Execute `rustlings hint functions5` or use the `hint` watch subcommand for a hint.
 
-// DONE WITH EXERCISE
+// I AM DONE
 
 fn main() {
     let answer = square(3);
@@ -9,6 +9,8 @@ fn main() {
 }
 
 fn square(num: i32) -> i32 {
-    // removed semicolon o implicit return expression
-    num * num
+    num * num;
+    // return expression needs to be specified
+    // can do it expliclity to return num
+    num
 }
